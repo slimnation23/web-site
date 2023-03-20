@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    color: #f1efef;
+}
+
+.content, .hero, .main-header, .gallery > * {
+    will-change: transform;
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+    --gallery-gap: calc(var(--index) * 10)
+}
+
+body {
+    background: url(../img/bg.jpg);
+    background-size: 50px;
+    overflow-x: hidden;
+}
+
+.hero {
+    width: calc(var(--index) * 36);
+    position: absolute;
+    left: 37vw;
+    top: 8vh;
+    z-index: -1;
+}
+
+.main-header {
+    height: 100vh;
+}
+
+.container {
+    padding: 0 7vw;
+}
+
+.main-tittle {
+    font-size: calc(var(--index) * 8);
+    position: absolute;
+    bottom: 12vh;
+    width: min-content;
+}
+
+.gallery {
+    display: flex;
+    padding: calc(var(--index) * 8) 0;
+}
+
+.gallery > * {
+    color: #f1efef;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gallery__item {
+    max-width: calc(var(--index) * 21);
+    margin-bottom: var(--gallery-gap);
+    border-radius: 8px;
+}
+
+.gallery__left {
+    margin-top: calc(var(--gallery-gap) * 1.7);
+}
+
+.gallery__right .gallery__item {
+    margin: 0;
+    margin-top: var(--gallery-gap);
+}
+
+.text-block {
+    position: relative;
+}
+
+.text-block_h {
+    font-size: 2.5rem;
+    margin-bottom: 1.5em;
+}
+
